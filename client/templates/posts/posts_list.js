@@ -14,9 +14,20 @@
 // 	url:'http://themeteorbook.com'
 // }];
 //helpers posisList methord
+
 Template.postsList.helpers({
+	// posts:function(){
+	// 	return Posts.find();
+	// }
 	posts:function(){
-		return Posts.find();
+		return Posts.find({},{});
 	}
 });
+
+Meteor.startup(function(){
+	Tracker.autorun(function(){
+		console.log('Three are'+Posts.find().count()+'posts');
+	});
+});
+
 
