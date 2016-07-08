@@ -20,7 +20,7 @@ Template.postsList.helpers({
 	// 	return Posts.find();
 	// }
 	posts:function(){
-		return Posts.find({},{});
+		return Posts.find({},{sort:{submitted:-1}});
 	}
 });
 

@@ -26,6 +26,8 @@ Meteor.publish('posts',function(){
 	return Posts.find();
 });
 
+
+
 // Posts.find().observe({
 // 	added:function(post){
 // 		//when 'added' callback fires,add HTML element
