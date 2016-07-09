@@ -9,5 +9,8 @@ Template.postItem.helpers({
 
 		// return this.userId===Meteor.userId();
 		return 'admine';
+	},
+	commentsCount:function(){
+		return Comments.find({postId:this._id}).count();
 	}
 });

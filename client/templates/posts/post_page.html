@@ -1,3 +1,14 @@
 <template name='postPage'>
 	{{> postItem}}
+	<ul class="comments">
+		{{#each comments}}
+			{{> commentItem}}
+		{{/each}}
+	</ul>
+	<!-- {{> commentSubmit}} -->
+	{{#if currentUser}}
+		{{> commentSubmit}}
+		{{else}}
+		<p>Plase log in ti leave a commemt</p>
+	{{/if}}
 </template>
